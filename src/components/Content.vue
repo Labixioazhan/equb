@@ -1,8 +1,15 @@
+<!--
+ * @Description: 
+ * @Author: xuzhan
+ * @Date: 2021-11-25 17:46:43
+ * @LastEditTime: 2021-11-29 09:54:06
+ * @LastEditors: xuzhan
+-->
 <template>
   <transition name="slide-right">
     <div class="content">
       <div class="content-wrapper" v-if="bookAvailable">
-        <div class="content-item" v-for="(item, index) in navigation.toc" :key="index" @click="jumpTo(item.href)">
+        <div class="content-item" v-for="(item, index) in navigation.toc[0].subitems" :key="index" @click="jumpTo(item.href)">
           <span class="text">{{item.label}}</span>
         </div>
       </div>

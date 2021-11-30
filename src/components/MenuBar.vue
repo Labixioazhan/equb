@@ -90,6 +90,11 @@ export default {
     },
     navigation: Object
   },
+  watch:{
+    ifTitleAndMenuShow(val){
+      return val
+    }
+  },
   data() {
     return {
       ifSettingShow: false,
@@ -127,7 +132,7 @@ export default {
     // 显示设置面板
     showSetting(tag) {
       this.showTag = tag
-      if (this.showTag === 3) {
+      if (this.showTag === 3 ) {
         this.ifSettingShow = false
         this.ifShowContent = true
       } else {
