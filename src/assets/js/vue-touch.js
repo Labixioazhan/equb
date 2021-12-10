@@ -1,6 +1,13 @@
+/*
+ * @Description: 
+ * @Author: xuzhan
+ * @Date: 2021-12-03 13:59:44
+ * @LastEditTime: 2021-12-03 14:02:33
+ * @LastEditors: xuzhan
+ */
 import Vue from 'vue'
 //引入外部js
-import './hammer.min.js'
+import  Hammer from './hammer.min.js'
 
 
 function vueTouch(el,type,binding){

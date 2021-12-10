@@ -88,25 +88,29 @@ export default {
       type: Boolean,
       default: false
     },
-    navigation: Object
+    navigation: Object,
+    progress: {
+      type: Number,
+      default: 0
+    }
   },
   watch:{
     ifTitleAndMenuShow(val){
       return val
-    }
+    },
   },
   data() {
     return {
       ifSettingShow: false,
       showTag: 0,
-      progress: 0,
       ifShowContent: false
     }
   },
   methods: {
     // 隐藏目录
     hideContent() {
-      this.ifShowContent = false
+      this.ifShowContent = false,
+      this.ifTitleAndMenuShow =true
     },
     // 跳转方法，调用父组件方法
     jumpTo(target) {
@@ -134,6 +138,7 @@ export default {
       this.showTag = tag
       if (this.showTag === 3 ) {
         this.ifSettingShow = false
+        this.ifTitleAndMenuShow = false
         this.ifShowContent = true
       } else {
         this.ifSettingShow = true
